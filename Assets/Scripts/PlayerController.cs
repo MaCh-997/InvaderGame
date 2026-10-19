@@ -11,17 +11,6 @@ public class PlayerController : MonoBehaviour
         {
             m_actions = new InputSystem_Actions();
             m_player = m_actions.Player;
-            //m_Player.Move.performed += OnMove; // Subscribe to the Move action
-            //m_Player.Move.canceled += OnMove; // Subscribe to the Move action
-        }
-        private void OnEnable() => m_actions.Enable(); // Enable the input actions
-        private void OnDisable() => m_actions.Disable(); // Disable the input actions to prevent them from being active when not needed
-        private void OnDestroy() => m_actions.Dispose(); // Clean up the input actions
-
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-
         }
 
         // Update is called once per frame
