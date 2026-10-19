@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 moveInp = m_player.Move.ReadValue<Vector2>();
             transform.Translate(moveInp * m_speed * Time.deltaTime, Space.World);
+
+            // x座標を -2 から 2 の間に強制的に制限する
+            Vector3 clampedPosition = transform.position;
+            clampedPosition.x = Mathf.Clamp(clampedPosition.x, -2.0f, 2.0f);
+            transform.position = clampedPosition;
+
             if (moveInp != Vector2.zero)
             {
                 Debug.Log("Move Vector: " + moveInp.ToString());
