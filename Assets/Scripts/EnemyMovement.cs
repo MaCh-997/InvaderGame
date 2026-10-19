@@ -3,24 +3,22 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     int moveDirection = 1; // 1 for right, -1 for left
-    int moveCount = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float moveSpeed = 2.0f;
+    [SerializeField] private float moveDistance = 5.0f;
 
     // Update is called once per frame
     void Update()
     {
-        moveCount++;
+        transform.Translate(Vector3.right * moveDirection * moveSpeed * Time.deltaTime);
 
-        if (moveCount >= 500) // Change direction every 500 frames
+        // 画面中央（X=0）を基準として、左右の限界（m_limitX）を超えたら方向を反転する
+        if (transform.position.x >= moveDistance)
         {
-            moveDirection *= -1; // Reverse direction
-            moveCount = 0; // Reset count
+            moveDirection = -1; // 左へ移動
         }
-
-        transform.Translate(Vector3.right * moveDirection * Time.deltaTime);
+        else if (transform.position.x <= -moveDistance)
+        {
+            moveDirection = 1; // 右へ移動
+        }
     }
 }

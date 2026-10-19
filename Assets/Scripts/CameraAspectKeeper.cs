@@ -5,11 +5,6 @@ public class CameraAspectKeeper : MonoBehaviour
 {
     [SerializeField] private Camera targetCamera; //対象のカメラ
     [SerializeField] private Vector2 aspectVec; //目的のアスペクト比
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     private void Update()
