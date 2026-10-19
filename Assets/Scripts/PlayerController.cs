@@ -1,0 +1,37 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerController : MonoBehaviour
+{
+     [SerializeField, Range(1, 10)] float m_speed = 5.0f;
+        InputSystem_Actions m_actions;
+        InputSystem_Actions.PlayerActions m_player;
+
+        private void Awake()
+        {
+            m_actions = new InputSystem_Actions();
+            m_player = m_actions.Player;
+            //m_Player.Move.performed += OnMove; // Subscribe to the Move action
+            //m_Player.Move.canceled += OnMove; // Subscribe to the Move action
+        }
+        private void OnEnable() => m_actions.Enable(); // Enable the input actions
+        private void OnDisable() => m_actions.Disable(); // Disable the input actions to prevent them from being active when not needed
+        private void OnDestroy() => m_actions.Dispose(); // Clean up the input actions
+
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            Vector2 moveInp = m_player.Move.ReadValue<Vector2>();
+            transform.Translate(moveInp * m_speed * Time.deltaTime, Space.World);
+            if (moveInp != Vector2.zero)
+            {
+                Debug.Log("Move Vector: " + moveInp.ToString());
+            }
+        }
+}
