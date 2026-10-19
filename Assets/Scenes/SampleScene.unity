@@ -217,9 +217,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0006188154
+    x: 0.33417407
     y: 0
-    width: 0.99876237
+    width: 0.33165187
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 1313611919}
   - component: {fileID: 1313611918}
   - component: {fileID: 1313611920}
+  - component: {fileID: 1313611921}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -495,12 +496,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313611917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 069bbebae1b7b76499aaa33a0163ba3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGenerater
   enemyPrefab: {fileID: 219098375122815387, guid: d77c9502c654e944cb2d40ec4f2ce872, type: 3}
+--- !u!114 &1313611921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313611917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f411ca06eae3c499c7e65479fec1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletGenerator
+  bulletPrefab: {fileID: 6418602143319867569, guid: 4b293b0b317a9c845aa05707dceba0ae, type: 3}
+  atkInterval: 2
 --- !u!1 &1717663107
 GameObject:
   m_ObjectHideFlags: 0

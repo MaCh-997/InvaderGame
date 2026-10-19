@@ -1,10 +1,9 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    float timer = 0;
-    [SerializeField] float atkInterval = 0.5f; // 攻撃間隔を設定
+    [SerializeField] private float moveSpeed = 2.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,12 +13,10 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= atkInterval)
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+        if(transform.position.y >= 5.0f)
         {
-                Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                timer = 0; // Reset the timer after shooting
-            
+            Destroy(gameObject);
         }
     }
 }
