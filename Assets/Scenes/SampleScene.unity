@@ -217,10 +217,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.34160084
-    width: 1
-    height: 0.31679833
+    x: 0.0006188154
+    y: 0
+    width: 0.99876237
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraAspectKeeper
   targetCamera: {fileID: 519420031}
-  aspectVec: {x: 1920, y: 1080}
+  aspectVec: {x: 1080, y: 1920}
 --- !u!4 &1313611919
 Transform:
   m_ObjectHideFlags: 0
