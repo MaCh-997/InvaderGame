@@ -17,12 +17,13 @@ public class EnemyGenerater : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("Hit!");
             Destroy(collision.gameObject); // Destroy the bullet
             Destroy(gameObject); // Destroy the enemy
         }
-    }
+    }*/
 }
