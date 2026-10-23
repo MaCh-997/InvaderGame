@@ -6,28 +6,28 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 2.0f;
     [SerializeField] private float movePlusDistance = 5.0f;
     [SerializeField] private float moveMinusDistance = 5.0f;
-    public EnemyGenerater enemygenerater;
+    public EnemyGenerater enemyGenerater;
 
     void Start()
     {
         // インスペクターで設定されていない場合、シーン内から自動でEnemyGeneraterを探して取得する
-        if (enemygenerater == null)
+        if (enemyGenerater == null)
         {
-            enemygenerater = Object.FindAnyObjectByType<EnemyGenerater>();
+            enemyGenerater = Object.FindAnyObjectByType<EnemyGenerater>();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemygenerater.parentObject.Translate(Vector3.right * moveDirection * moveSpeed * Time.deltaTime);
+        enemyGenerater.parentObject.Translate(Vector3.right * moveDirection * moveSpeed * Time.deltaTime);
 
         // 画面中央（X=0）を基準として、左右の限界（m_limitX）を超えたら方向を反転する
-        if (enemygenerater.parentObject.position.x >= movePlusDistance)
+        if (enemyGenerater.parentObject.position.x >= movePlusDistance)
         {
             moveDirection = -1; // 左へ移動
         }
-        else if (enemygenerater.parentObject.position.x <= -moveMinusDistance)
+        else if (enemyGenerater.parentObject.position.x <= -moveMinusDistance)
         {
             moveDirection = 1; // 右へ移動
         }
