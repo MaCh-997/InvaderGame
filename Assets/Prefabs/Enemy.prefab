@@ -105,8 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04cecba48811c74c91902508e05fc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  moveSpeed: 1
-  moveDistance: 5
+  moveSpeed: 0.075
+  movePlusDistance: 2
+  moveMinusDistance: 0.1
+  enemygenerater: {fileID: 0}
 --- !u!61 &-2816585379109703735
 BoxCollider2D:
   m_ObjectHideFlags: 0
