@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 1717663110}
   - component: {fileID: 1717663112}
   - component: {fileID: 1717663113}
+  - component: {fileID: 1717663114}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -780,6 +781,19 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6418602143319867569, guid: 4b293b0b317a9c845aa05707dceba0ae, type: 3}
   atkInterval: 2
   playerController: {fileID: 0}
+--- !u!114 &1717663114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717663107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2be8eff78b1aba4c9e793400ae5fc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LifeCount
+  lifeCount: 3
 --- !u!1 &2143534542
 GameObject:
   m_ObjectHideFlags: 0
