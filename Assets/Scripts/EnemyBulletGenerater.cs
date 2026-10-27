@@ -2,29 +2,26 @@ using UnityEngine;
 
 public class EnemyBulletGenerator : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    float timer = 0;
-    [SerializeField] float atkInterval = 0.5f; // 攻撃間隔を設定
-    public EnemyGenerater enemyGenerater;
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] float atkInterval = 2.0f;
+    [SerializeField] Vector3 spawnOffset = new Vector3(0, -0.5f, 0); // 敵の少し下から出す
+
+    float timer;
 
     void Start()
     {
-        if (enemyGenerater == null)
-        {
-            enemyGenerater = Object.FindAnyObjectByType<EnemyGenerater>();
-        }
+        // 12体が同時に撃たないよう、発射タイミングをずらす
+        timer = Random.Range(0f, atkInterval);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
         if (timer >= atkInterval)
         {
-            //Instantiate(bulletPrefab, new Vector3(enemyGenerater.transform.position.x, 0, 0), Quaternion.identity);
-            Instantiate(bulletPrefab, new Vector3(Random.Range(-2.5f, 2.5f), 0, 0), Quaternion.identity);
-            timer = 0; // Reset the timer after shooting
+            // 敵の現在のワールド座標(x, y)から生成。親は指定しない
+            Instantiate(bulletPrefab, transform.position + spawnOffset, Quaternion.identity);
+            timer = 0;
         }
     }
 }
-

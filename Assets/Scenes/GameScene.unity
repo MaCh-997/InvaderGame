@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBulletGenerator
   bulletPrefab: {fileID: 5930702734593444576, guid: 5556474400e30384a8db26ea7b40049c, type: 3}
   atkInterval: 2
-  enemyGenerater: {fileID: 0}
+  spawnOffset: {x: 0, y: -0.5, z: 0}
 --- !u!114 &322050584
 MonoBehaviour:
   m_ObjectHideFlags: 0
