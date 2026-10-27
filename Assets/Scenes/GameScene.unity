@@ -482,9 +482,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1313611919}
   - component: {fileID: 1313611918}
+  - component: {fileID: 1313611922}
   - component: {fileID: 1313611921}
   - component: {fileID: 1313611923}
-  - component: {fileID: 1313611922}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -535,9 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletGenerator
   bulletPrefab: {fileID: 6418602143319867569, guid: 4b293b0b317a9c845aa05707dceba0ae, type: 3}
   atkInterval: 2
-  modeChange: 1
   playerController: {fileID: 0}
-  enemyMovement: {fileID: 0}
 --- !u!114 &1313611922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,14 +559,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1313611917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10f411ca06eae3c499c7e65479fec1d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 617b9e61c4248e345a57639c8a303821, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletGenerator
-  bulletPrefab: {fileID: 6418602143319867569, guid: 4b293b0b317a9c845aa05707dceba0ae, type: 3}
-  atkInterval: 3
-  modeChange: 2
-  playerController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyBulletGenerator
+  bulletPrefab: {fileID: 5930702734593444576, guid: 5556474400e30384a8db26ea7b40049c, type: 3}
+  atkInterval: 2
   enemyMovement: {fileID: 0}
+  enemyGenerater: {fileID: 0}
 --- !u!1 &1717663107
 GameObject:
   m_ObjectHideFlags: 0
