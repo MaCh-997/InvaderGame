@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8362568345218593427}
   - component: {fileID: 4202437987085650581}
-  - component: {fileID: -1428255965762239616}
   - component: {fileID: -2816585379109703735}
+  - component: {fileID: 8205553564717475686}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -93,22 +93,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &-1428255965762239616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219098375122815387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a04cecba48811c74c91902508e05fc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  moveSpeed: 0.075
-  movePlusDistance: 2
-  moveMinusDistance: 0.1
-  enemyGenerater: {fileID: 0}
 --- !u!61 &-2816585379109703735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -155,3 +139,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8205553564717475686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219098375122815387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e27d659798e9fe4d913c37a3a98f0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDestroyer

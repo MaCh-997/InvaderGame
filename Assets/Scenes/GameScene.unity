@@ -128,6 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322050582}
+  - component: {fileID: 322050583}
+  - component: {fileID: 322050584}
   m_Layer: 0
   m_Name: EnemyParent
   m_TagString: Untagged
@@ -150,6 +152,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322050583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322050581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617b9e61c4248e345a57639c8a303821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyBulletGenerator
+  bulletPrefab: {fileID: 5930702734593444576, guid: 5556474400e30384a8db26ea7b40049c, type: 3}
+  atkInterval: 2
+  enemyGenerater: {fileID: 0}
+--- !u!114 &322050584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322050581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e80a249dfa2984fa7d10df605dd468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyParentMover
+  moveSpeed: 1
+  Rightlimit: 2
+  Leftlimit: -5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,10 +280,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0006188154
-    y: 0
-    width: 0.99876237
-    height: 1
+    x: 0
+    y: 0.055555552
+    width: 1
+    height: 0.8888889
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -484,7 +516,6 @@ GameObject:
   - component: {fileID: 1313611918}
   - component: {fileID: 1313611922}
   - component: {fileID: 1313611921}
-  - component: {fileID: 1313611923}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -528,7 +559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313611917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10f411ca06eae3c499c7e65479fec1d0, type: 3}
   m_Name: 
@@ -550,22 +581,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGenerater
   enemyPrefab: {fileID: 219098375122815387, guid: d77c9502c654e944cb2d40ec4f2ce872, type: 3}
   parentObject: {fileID: 322050582}
---- !u!114 &1313611923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313611917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617b9e61c4248e345a57639c8a303821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBulletGenerator
-  bulletPrefab: {fileID: 5930702734593444576, guid: 5556474400e30384a8db26ea7b40049c, type: 3}
-  atkInterval: 2
-  enemyMovement: {fileID: 0}
-  enemyGenerater: {fileID: 0}
 --- !u!1 &1717663107
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +594,7 @@ GameObject:
   - component: {fileID: 1717663111}
   - component: {fileID: 1717663110}
   - component: {fileID: 1717663112}
+  - component: {fileID: 1717663113}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -749,6 +765,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1717663113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717663107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f411ca06eae3c499c7e65479fec1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletGenerator
+  bulletPrefab: {fileID: 6418602143319867569, guid: 4b293b0b317a9c845aa05707dceba0ae, type: 3}
+  atkInterval: 2
+  playerController: {fileID: 0}
 --- !u!1 &2143534542
 GameObject:
   m_ObjectHideFlags: 0
