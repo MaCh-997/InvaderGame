@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyParentMover
   moveSpeed: 1
   Rightlimit: 2
-  Leftlimit: -5
+  Leftlimit: -2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

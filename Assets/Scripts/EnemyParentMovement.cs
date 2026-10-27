@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class EnemyParentMover : MonoBehaviour
+public class EnemyParentMovement : MonoBehaviour
 {
     int moveDirection = 1;
     [SerializeField] float moveSpeed = 2.0f;
-    [SerializeField] float Rightlimit = 5.0f;
-    [SerializeField] float Leftlimit = -5.0f;
+    [SerializeField] public float Rightlimit = 5.0f;
+    [SerializeField] public float Leftlimit = -5.0f;
 
     void Update()
     {

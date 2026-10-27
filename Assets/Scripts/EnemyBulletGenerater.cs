@@ -21,7 +21,8 @@ public class EnemyBulletGenerator : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= atkInterval)
         {
-            Instantiate(bulletPrefab, new Vector3(enemyGenerater.transform.position.x, 0, 0), Quaternion.identity);
+            //Instantiate(bulletPrefab, new Vector3(enemyGenerater.transform.position.x, 0, 0), Quaternion.identity);
+            Instantiate(bulletPrefab, new Vector3(Random.Range(-2.5f, 2.5f), 0, 0), Quaternion.identity);
             timer = 0; // Reset the timer after shooting
         }
     }
