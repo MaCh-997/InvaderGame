@@ -152,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletGenerator
   bulletPrefab: {fileID: 6418602143319867569, guid: 4b293b0b317a9c845aa05707dceba0ae, type: 3}
   atkInterval: 2
+  playerController: {fileID: 0}
 --- !u!114 &220664856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGenerater
   enemyPrefab: {fileID: 219098375122815387, guid: d77c9502c654e944cb2d40ec4f2ce872, type: 3}
+  parentObject: {fileID: 0}
 --- !u!114 &220664857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,8 +264,8 @@ Canvas:
   m_GameObject: {fileID: 237069302}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1955164997}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -348,10 +350,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0006188154
-    y: 0
-    width: 0.99876237
-    height: 1
+    x: 0
+    y: 0.055555552
+    width: 1
+    height: 0.8888889
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
